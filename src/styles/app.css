@@ -1,0 +1,24 @@
+.mantine-AppShell-navbar {
+	& a {
+		color: light-dark(
+			var(--mantine-color-gray-7),
+			var(--mantine-color-dark-1)
+		);
+
+		&[data-active='true'] {
+			background-color: var(--mantine-color-blue-light);
+			color: var(--mantine-color-blue-light-color);
+
+			& svg {
+				color: var(--mantine-color-blue-light-color);
+			}
+		}
+
+		& svg {
+			color: light-dark(
+				var(--mantine-color-gray-6),
+				var(--mantine-color-dark-2)
+			);
+		}
+	}
+}
