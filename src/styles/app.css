@@ -1,9 +1,7 @@
 .mantine-AppShell-navbar {
 	& a {
-		color: light-dark(
-			var(--mantine-color-gray-7),
-			var(--mantine-color-dark-1)
-		);
+		color: light-dark(var(--mantine-color-gray-7),
+				var(--mantine-color-dark-1));
 
 		&[data-active='true'] {
 			background-color: var(--mantine-color-blue-light);
@@ -15,10 +13,50 @@
 		}
 
 		& svg {
-			color: light-dark(
-				var(--mantine-color-gray-6),
-				var(--mantine-color-dark-2)
-			);
+			color: light-dark(var(--mantine-color-gray-6),
+					var(--mantine-color-dark-2));
 		}
 	}
+}
+
+.mantine-ChartLegend-legend {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: flex-end;
+	height: 100%;
+
+	& .mantine-ChartLegend-legendItem {
+		display: flex;
+		align-items: center;
+		gap: calc(.4375rem* var(--mantine-scale));
+		padding: 7px var(--mantine-spacing-xs);
+		border-radius: var(--mantine-radius-default);
+		line-height: 1;
+	}
+}
+
+.mantine-ChartTooltip-tooltip {
+	min-width: calc(12.5rem* var(--mantine-scale));
+	background-color: var(--mantine-color-body);
+	box-shadow: var(--mantine-shadow-md);
+	border-radius: var(--mantine-radius-default);
+	border: 1px solid var(--mantine-color-gray-3);
+	padding: var(--mantine-spacing-sm) var(--mantine-spacing-md);
+
+	& .mantine-ChartTooltip-tooltipItemBody {
+		display: flex;
+		align-items: center;
+		gap: var(--mantine-spacing-sm);
+		margin-inline-end: var(--mantine-spacing-xl);
+	}
+
+	& .mantine-ChartTooltip-tooltipItem {
+		background-color: white;
+		display: flex;
+		justify-content: space-between;
+	}
+}
+.mantine-AreaChart-root svg {
+	overflow: visible;
 }
