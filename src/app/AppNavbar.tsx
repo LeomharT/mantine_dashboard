@@ -3,6 +3,7 @@ import { AppShellNavbar, NavLink } from '@mantine/core';
 import {
 	Icon2fa,
 	IconBellRinging,
+	IconChartHistogram,
 	IconDatabaseImport,
 	IconFingerprint,
 	IconKey,
@@ -15,7 +16,7 @@ export default function AppNavbar() {
 	const [active, setActive] = useState('Notifications');
 
 	const tabs = [
-		{ link: '', label: 'Notifications', icon: <IconBellRinging /> },
+		{ link: '', label: 'Notifications', icon: <IconChartHistogram /> },
 		{ link: '', label: 'Billing', icon: <IconReceipt2 /> },
 		{ link: '', label: 'Security', icon: <IconFingerprint /> },
 		{ link: '', label: 'SSH Keys', icon: <IconKey /> },
