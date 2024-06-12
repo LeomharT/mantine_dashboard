@@ -7,9 +7,7 @@ export default function AppMain() {
 	return (
 		<AppShellMain>
 			<Stack>
-				<Group m={'0 auto'} justify='space-between' maw={'max-content'}>
-					<VectorMap />
-				</Group>
+				<VectorMap />
 				<Group m={'0 auto'} justify='space-between' maw={'max-content'}>
 					<BarCharts />
 					<BarMultiplechart />

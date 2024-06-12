@@ -10,7 +10,6 @@ export default function BarCharts() {
 			<Chart
 				options={{
 					chart: {
-						width: 350,
 						toolbar: { show: false },
 						zoom: {
 							enabled: false,
