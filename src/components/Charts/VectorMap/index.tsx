@@ -13,7 +13,7 @@ export default function VectorMap() {
 
 		if (el) el.innerHTML = '';
 
-		const map = new jsVectorMap({
+		new jsVectorMap({
 			selector: '#map',
 			map: 'world',
 			zoomButtons: false,
@@ -30,8 +30,6 @@ export default function VectorMap() {
 				},
 			},
 		});
-
-		console.log(map);
 	}, []);
 	return (
 		<Card shadow='xs' classNames={{ ...classes }}>

@@ -1,7 +1,7 @@
 import { Card, Title, useMantineTheme } from '@mantine/core';
 import Chart from 'react-apexcharts';
 
-export default function BarMultiplechart() {
+export default function ColumnMultiplechart() {
 	const theme = useMantineTheme();
 
 	return (

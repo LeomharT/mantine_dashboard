@@ -1,12 +1,12 @@
 import { Card, Title, useMantineTheme } from '@mantine/core';
 import Chart from 'react-apexcharts';
 
-export default function Barchart() {
+export default function Linechart() {
 	const theme = useMantineTheme();
 
 	return (
 		<Card shadow='xs'>
-			<Title order={3}>Bar</Title>
+			<Title order={3}>Area</Title>
 			<Chart
 				options={{
 					chart: {
@@ -18,17 +18,10 @@ export default function Barchart() {
 					dataLabels: {
 						enabled: false,
 					},
-					plotOptions: {
-						bar: {
-							barHeight: '50%',
-							borderRadius: 5,
-							borderRadiusApplication: 'end',
-							horizontal: true,
-						},
-					},
 					grid: {
 						strokeDashArray: 3,
 					},
+					stroke: { curve: 'smooth', width: 3 },
 					yaxis: {
 						min: 0,
 						max: 80,
@@ -55,8 +48,8 @@ export default function Barchart() {
 					},
 					colors: ['#00A76F', '#FFAB00', '#00B8D9', '#FF5630'],
 				}}
-				series={[{ data: [30, 40, 45, 50, 49, 60, 70, 75, 60] }]}
-				type='bar'
+				series={[{ data: [30, 40, 45, 50, 53, 60, 70, 75, 78] }]}
+				type='line'
 				width='500'
 			/>
 		</Card>
