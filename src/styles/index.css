@@ -1,3 +1,4 @@
 @import url('@mantine/core/styles.css');
+@import url('jsvectormap/dist/css/jsvectormap.min.css');
 @import url('./app.css');
 @import url('./apexcharts.css');

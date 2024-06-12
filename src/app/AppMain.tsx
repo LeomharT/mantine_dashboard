@@ -1,13 +1,20 @@
-import { AppShellMain } from '@mantine/core';
-import Chart from "react-apexcharts";
+import { AppShellMain, Group, Stack } from '@mantine/core';
+import BarMultiplechart from '../components/Charts/BarMultiplechart';
+import BarCharts from '../components/Charts/Barchart';
+import VectorMap from '../components/Charts/VectorMap';
 
 export default function AppMain() {
-	return <AppShellMain>
-		 <Chart
-               series={[{data:[30, 40, 45, 50, 49, 60, 70, 91]}] }
-              type="bar"
-              width="500"
-            />
-	</AppShellMain>;
+	return (
+		<AppShellMain>
+			<Stack>
+				<Group m={'0 auto'} justify='space-between' maw={'max-content'}>
+					<VectorMap />
+				</Group>
+				<Group m={'0 auto'} justify='space-between' maw={'max-content'}>
+					<BarCharts />
+					<BarMultiplechart />
+				</Group>
+			</Stack>
+		</AppShellMain>
+	);
 }
- 

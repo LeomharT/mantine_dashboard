@@ -2,7 +2,6 @@
 import { AppShellNavbar, NavLink } from '@mantine/core';
 import {
 	Icon2fa,
-	IconBellRinging,
 	IconChartHistogram,
 	IconDatabaseImport,
 	IconFingerprint,

@@ -23,7 +23,7 @@
 	backdrop-filter: blur(8px);
 	-webkit-backdrop-filter: blur(8px);
 	background: var(--apexcharts-tooltip-bg) !important;
-	color: rgb(33, 43, 54);
+	color: var(--apexcharts-label-text);
 	box-shadow: var(--apexcharts-tooltip-shadow) !important;
 	border-radius: var(--mantine-radius-md) !important;
 	border-color: transparent !important;
@@ -48,4 +48,9 @@
 	&::before {
 		border-bottom-color: rgba(145, 158, 171, 0.24) !important;
 	}
+}
+
+.apexcharts-legend-series {
+	display: flex !important;
+	align-items: center;
 }

@@ -12,6 +12,9 @@ export default function App() {
 				navbar={{
 					width: 300,
 					breakpoint: 'sm',
+					collapsed: {
+						mobile: true,
+					},
 				}}
 			>
 				<AppNavbar />
