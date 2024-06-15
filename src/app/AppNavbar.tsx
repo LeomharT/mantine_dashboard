@@ -10,8 +10,11 @@ import {
 	IconSettings,
 } from '@tabler/icons-react';
 import { useState } from 'react';
+import { useNavigate } from 'react-router';
 
 export default function AppNavbar() {
+	const navigate = useNavigate();
+
 	const [active, setActive] = useState('Notifications');
 
 	const tabs = [
@@ -31,6 +34,7 @@ export default function AppNavbar() {
 					active={tab.label === active}
 					onClick={() => {
 						setActive(tab.label);
+						navigate(tab.link ?? '');
 					}}
 					key={tab.label}
 					leftSection={tab.icon}
