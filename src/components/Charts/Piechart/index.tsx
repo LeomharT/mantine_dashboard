@@ -17,7 +17,7 @@ export default function Piechart() {
 					},
 					legend: {
 						show: true,
-						position: 'right',
+						position: 'bottom',
 						fontWeight: 700,
 						itemMargin: { vertical: 12 },
 						fontSize: '16px',

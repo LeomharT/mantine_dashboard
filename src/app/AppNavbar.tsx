@@ -9,17 +9,16 @@ import {
 	IconKey,
 	IconSettings,
 } from '@tabler/icons-react';
-import { useState } from 'react';
-import { useNavigate } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 
 export default function AppNavbar() {
 	const navigate = useNavigate();
 
-	const [active, setActive] = useState('Notifications');
+	const location = useLocation();
 
 	const tabs = [
 		{ link: '/', label: 'Notifications', icon: <IconChartHistogram /> },
-		{ link: 'page01', label: 'Billing', icon: <IconChartArcs /> },
+		{ link: '/billing', label: 'Billing', icon: <IconChartArcs /> },
 		{ link: '', label: 'Security', icon: <IconFingerprint /> },
 		{ link: '', label: 'SSH Keys', icon: <IconKey /> },
 		{ link: '', label: 'Databases', icon: <IconDatabaseImport /> },
@@ -31,9 +30,8 @@ export default function AppNavbar() {
 		<AppShellNavbar p={'sm'}>
 			{tabs.map((tab) => (
 				<NavLink
-					active={tab.label === active}
+					active={tab.link === location.pathname}
 					onClick={() => {
-						setActive(tab.label);
 						navigate(tab.link ?? '');
 					}}
 					key={tab.label}

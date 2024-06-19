@@ -22,3 +22,8 @@
 		}
 	}
 }
+
+.mantine-Select-option[data-checked='true'] {
+	background-color: var(--mantine-color-blue-light);
+	color: var(--mantine-color-blue-light-color);
+}

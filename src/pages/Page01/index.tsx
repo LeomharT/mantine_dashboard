@@ -8,11 +8,17 @@ import Linechart from '../../components/Charts/Linechart';
 import Mixchart from '../../components/Charts/Mixchart';
 import Piechart from '../../components/Charts/Piechart';
 import VectorMap from '../../components/Charts/VectorMap';
+import TotalUser from '../../components/Charts/TotalUser';
+import TotalInstalled from '../../components/Charts/TotalInstall';
 
 export default function Page01() {
 	return (
 		<Stack>
 			<VectorMap />
+			<Group m={'0 auto'} justify='space-between' maw={'max-content'}>
+				<TotalUser />
+				<TotalInstalled />
+			</Group>
 			<Group m={'0 auto'} justify='space-between' maw={'max-content'}>
 				<Areachart />
 				<Linechart />

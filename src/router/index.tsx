@@ -11,7 +11,7 @@ export const router = createBrowserRouter(
 	createRoutesFromElements(
 		<Route path='/' element={<App />}>
 			<Route index element={<Page01 />} />
-			<Route path='page01' element={<Page02 />} />
+			<Route path='billing' element={<Page02 />} />
 		</Route>
 	),
 	{ basename: '/mantine_dashboard/' }
