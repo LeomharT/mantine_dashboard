@@ -1,0 +1,26 @@
+.root {
+	width: 100dvw;
+	height: 100dvh;
+	background-color: var(--mantine-color-blue-filled);
+}
+
+.icon {
+	width: 240px;
+	height: 240px;
+	stroke-width: 1;
+	color: var(--mantine-color-blue-3);
+}
+
+.title {
+	text-align: center;
+	font-weight: 900;
+	font-size: rem(38px);
+	color: var(--mantine-color-white);
+}
+
+.description {
+	margin: auto;
+	margin-top: var(--mantine-spacing-xl);
+	margin-bottom: calc(var(--mantine-spacing-xl) * 1.5);
+	color: var(--mantine-color-blue-1) !important;
+}

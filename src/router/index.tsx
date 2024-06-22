@@ -7,6 +7,9 @@ import App from '../app/App';
 import Page01 from '../pages/Page01';
 import Page02 from '../pages/Page02';
 
+const basename =
+	process.env.NODE_ENV === 'development' ? '/' : '/mantine_dashboard/';
+
 export const router = createBrowserRouter(
 	createRoutesFromElements(
 		<Route path='/' element={<App />}>
@@ -14,5 +17,5 @@ export const router = createBrowserRouter(
 			<Route path='billing' element={<Page02 />} />
 		</Route>
 	),
-	{ basename: '/mantine_dashboard/' }
+	{ basename }
 );
