@@ -1,4 +1,4 @@
-import { Button, Center, Group, Stack, Text, Title } from '@mantine/core';
+import { Button, Center, Stack, Text, Title } from '@mantine/core';
 import { modals } from '@mantine/modals';
 import { IconLockAccess } from '@tabler/icons-react';
 import Login from '../../components/Auth/Login';
@@ -25,11 +25,9 @@ export default function AuthError() {
 					our development team was already notified. Try refreshing
 					the page.
 				</Text>
-				<Group justify='center'>
-					<Button variant='white' size='lg' onClick={auth}>
-						Login on this page
-					</Button>
-				</Group>
+				<Button variant='white' size='lg' onClick={auth}>
+					Login on this page
+				</Button>
 			</Stack>
 		</Center>
 	);

@@ -3,6 +3,7 @@ import { isNotEmpty, useForm } from '@mantine/form';
 import { modals } from '@mantine/modals';
 import { notifications } from '@mantine/notifications';
 import { IconArrowLeft, IconX } from '@tabler/icons-react';
+import sleep from '../../../utils/sleep';
 
 interface LoginInput {
 	user?: string;
@@ -20,17 +21,27 @@ export default function Login() {
 		},
 	});
 
-	const login = (data: LoginInput) => {
+	const login = async (data: LoginInput) => {
+		modals.closeAll();
+
+		const id = notifications.show({
+			id: 'Authenticate',
+			title: 'Authenticate',
+			loading: true,
+			message: 'Loading...',
+		});
+
+		await sleep(2000);
+
 		if (data.user !== 'admin' || data.pass !== 'admin!') {
-			notifications.show({
-				id: 'Authenticate Error',
+			notifications.update({
+				id,
 				color: 'red',
+				loading: false,
 				icon: <IconX />,
 				title: 'Authenticate Error',
 				message: 'Incorret Username or Password',
 			});
-
-			modals.closeAll();
 		} else {
 			sessionStorage.setItem('auth', 'allow');
 
